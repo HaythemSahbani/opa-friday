@@ -1,0 +1,5 @@
+{
+  "action": "create",
+  "jwt": {"claims": { "username": "Bret"}},
+  "post_id": 2
+}
