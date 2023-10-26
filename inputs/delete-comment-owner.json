@@ -1,0 +1,5 @@
+{
+  "action": "delete",
+  "jwt": {"claims": { "username": "Bret"}},
+  "comment_id": 1
+}
