@@ -58,6 +58,8 @@ add_comment if {
 }
 
 # Upvote a comment
+# User can upvote if  he has already posted more than 2 comments
+# User can't upvote his own comments
 # version 1
 
 upvote_comment if {
@@ -81,6 +83,7 @@ upvote_comment if {
 	# comment should exist
 	some comment in comments
 	comment.id == input.comment_id
+  comment.email != user.email
 }
 
 # # version 3 use a function
