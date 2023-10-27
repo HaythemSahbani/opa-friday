@@ -21,14 +21,14 @@ Call the `delete_comment` policy with some input data
 $ opa eval --data policies \
    --format pretty \
    --input inputs/delete-comment-owner.json \
-   'data.office.friday.delete_comment'
+   'data.comments.rules.delete_comment'
 ```
 
 ```sh
 $ opa eval --data policies \
    --format pretty \
    --input inputs/delete-comment-post-owner.json \
-   'data.office.friday.delete_comment'
+   'data.comments.rules.delete_comment'
 ```
 
 ###  exec
