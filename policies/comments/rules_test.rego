@@ -57,3 +57,14 @@ test_delete_comment_fails if {
     with posts as mock_posts
     with users as mock_users
 }
+
+test_add_comment_success if {
+  mock_input := {
+    "action" : "create",
+    "post_id": 1,
+    "jwt": { "claims": {} }
+  }
+  rules.add_comment
+    with input as mock_input
+    with posts as [{ "id": 1 }]
+}

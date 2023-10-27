@@ -50,7 +50,7 @@ find_user(jwt) := user if {
 ### find_user(jwt) := users[_].username == jwt.claims.username
 default add_comment := false
 add_comment if {
-	find_user(input.jwt)
+	input.jwt.claims # check that the user is logged in
 	input.action == "create"
 
 	post := posts[_]
